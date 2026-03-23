@@ -10,7 +10,7 @@ const mockListings = [
       id: '1',
       name: 'Cozy Beach House',
       avgRatingLocalized: '4.8',
-      contextualPictures: [{ picture: 'https://a0.muscache.com/im/pictures/miso/Hosting-3096334/original/8ca1d4a1-6d4c-4b82-81a1-b5f44aa3f1d0.jpeg' }],
+      contextualPictures: [{ picture: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800' }],
     },
     pricingQuote: {
       structuredStayDisplayPrice: { primaryLine: { price: '$120' } }
@@ -21,7 +21,7 @@ const mockListings = [
       id: '2',
       name: 'Modern City Apartment',
       avgRatingLocalized: '4.5',
-      contextualPictures: [{ picture: 'https://a0.muscache.com/im/pictures/miso/Hosting-3096334/original/8ca1d4a1-6d4c-4b82-81a1-b5f44aa3f1d0.jpeg' }],
+      contextualPictures: [{ picture: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800' }],
     },
     pricingQuote: {
       structuredStayDisplayPrice: { primaryLine: { price: '$85' } }
@@ -32,10 +32,43 @@ const mockListings = [
       id: '3',
       name: 'Mountain View Cabin',
       avgRatingLocalized: '4.9',
-      contextualPictures: [{ picture: 'https://a0.muscache.com/im/pictures/miso/Hosting-3096334/original/8ca1d4a1-6d4c-4b82-81a1-b5f44aa3f1d0.jpeg' }],
+      contextualPictures: [{ picture: 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800' }],
     },
     pricingQuote: {
       structuredStayDisplayPrice: { primaryLine: { price: '$200' } }
+    }
+  },
+  {
+    listing: {
+      id: '4',
+      name: 'Luxury Villa with Pool',
+      avgRatingLocalized: '5.0',
+      contextualPictures: [{ picture: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800' }],
+    },
+    pricingQuote: {
+      structuredStayDisplayPrice: { primaryLine: { price: '$350' } }
+    }
+  },
+  {
+    listing: {
+      id: '5',
+      name: 'Charming Studio Downtown',
+      avgRatingLocalized: '4.3',
+      contextualPictures: [{ picture: 'https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800' }],
+    },
+    pricingQuote: {
+      structuredStayDisplayPrice: { primaryLine: { price: '$65' } }
+    }
+  },
+  {
+    listing: {
+      id: '6',
+      name: 'Lakeside Retreat',
+      avgRatingLocalized: '4.7',
+      contextualPictures: [{ picture: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800' }],
+    },
+    pricingQuote: {
+      structuredStayDisplayPrice: { primaryLine: { price: '$175' } }
     }
   },
 ]
@@ -62,7 +95,10 @@ function Home() {
             ⚠️ {error.message} — Showing sample listings instead.
           </div>
         )}
-        <h1 className="text-2xl font-bold mb-4">Available Properties</h1>
+        <h1 className="text-2xl font-bold mb-2">Available Properties</h1>
+        <p className="text-gray-500 text-sm mb-6">
+          Explore our hand-picked selection of amazing stays
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {listings.map((listing) => (
             <ListingCard key={listing.listing.id} listing={listing} />

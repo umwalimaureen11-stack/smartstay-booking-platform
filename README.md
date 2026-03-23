@@ -1,18 +1,57 @@
-# React + Vite
+# 🏠 SmartStay Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-grade accommodation booking platform inspired by Airbnb, built with React + Vite.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[View Live App](#) <!-- Add your Vercel URL here after deployment -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **React + Vite** — Frontend framework
+- **Tailwind CSS** — Styling
+- **React Router** — Client-side routing
+- **TanStack Query** — Server state & caching
+- **Axios** — API requests
+- **Zustand** — Booking state management
+- **Context API** — Favorites & Filters
 
-## React Compiler
+## 📁 Project Structure
+```
+src/
+├── components/     # Reusable UI components
+├── pages/          # Page components
+├── hooks/          # Custom React hooks
+├── context/        # Context API providers
+├── store/          # Zustand store
+├── services/       # Axios API service
+└── utils/          # Utility functions
+```
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🔌 API Integration
+Uses the Airbnb API via RapidAPI:
+- Base URL: `https://airbnb19.p.rapidapi.com`
+- Endpoint: `/api/v2/searchPropertyByPlaceId`
+- TanStack Query handles caching with 5min staleTime
 
-Note: This will impact Vite dev & build performances.
+## ⚙️ Setup Instructions
 
-## Expanding the ESLint configuration
+1. Clone the repository
+2. Install dependencies:
+```bash
+   npm install
+```
+3. Create a `.env` file in the root:
+```
+   VITE_RAPID_API_KEY=your_api_key_here
+```
+4. Run the development server:
+```bash
+   npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+- 🔍 Search and filter properties
+- ❤️ Save favorites (persisted in localStorage)
+- 📋 Book properties and manage bookings
+- 🔐 Protected routes with authentication
+- 📱 Fully responsive design
+- ⚡ Cached API calls with TanStack Query
